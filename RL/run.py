@@ -1,3 +1,19 @@
+import sys
+import os
+
+# --- PATH SETUP ---
+# Get current directory (RL/)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# Get tasks directory (../tasks)
+tasks_dir = os.path.join(os.path.dirname(current_dir), 'tasks')
+# Get parent directory (for searching CSVs or other utils if needed)
+parent_dir = os.path.dirname(current_dir)
+
+# Add them to system path
+sys.path.append(tasks_dir)
+sys.path.append(parent_dir)
+# ------------------
+
 import torch
 from embeddings import QueryEmbedder
 from env import HierarchicalTaskEnv

@@ -3,13 +3,15 @@ from gymnasium import spaces
 import numpy as np
 import random
 from reward_model import LLMRewardModel
+from tasks.forecaster import TaskForecaster
 
 class HierarchicalTaskEnv(gym.Env):
     def __init__(self, embedder):
         super(HierarchicalTaskEnv, self).__init__()
         self.embedder = embedder
         self.reward_model = LLMRewardModel()
-        
+        self.forecaster = TaskForecaster()
+
         # State: BERT embedding size (128)
         self.observation_space = spaces.Box(low=-np.inf, high=np.inf, shape=(128,), dtype=np.float32)
         
@@ -37,11 +39,13 @@ class HierarchicalTaskEnv(gym.Env):
         task_id = action[0]
         days_input = action[1] + 1  # Convert 0-9 index to 1-10 days
         
-        # Execute the specific task logic
-        if task_id == 0:
-            self._run_temperature_task(days_input)
-        else:
-            self._run_euv_task(days_input)
+        predictions = self.forecaster.predict(task_id, days_input)
+        task_name = "Temperature (°C)" if task_id == 0 else "ET0 (mm)"
+        print(f"\n[System] TASK: {task_name}")
+        print(f"[System] FORECAST ({days_input} days):")
+
+        pred_str = ", ".join([f"{p:.2f}" for p in predictions])
+        print(f"   > {pred_str}")
             
         # Reward
         reward, info = self.reward_model.get_reward(
@@ -54,15 +58,3 @@ class HierarchicalTaskEnv(gym.Env):
         truncated = False
         
         return self.observation_space.sample(), reward, terminated, truncated, info
-
-    def _run_temperature_task(self, days):
-        # Static output mock
-        print(f"\n[System] TASK: Temperature Prediction")
-        print(f"[System] INPUT: {days} days")
-        # print(f"[Result] The predicted temperature for the next {days} days are: 24°C, 25°C, 23°C ... (static mock)")
-
-    def _run_euv_task(self, days):
-        # Static output mock
-        print(f"\n[System] TASK: EUV (Extreme Ultraviolet) Prediction")
-        print(f"[System] INPUT: {days} days")
-        # print(f"[Result] The predicted EUV flux for the next {days} days are: 1.2e-3, 1.4e-3 ... (static mock)")

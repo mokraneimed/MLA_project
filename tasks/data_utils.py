@@ -3,9 +3,13 @@ import numpy as np
 import torch
 from sklearn.preprocessing import MinMaxScaler
 import joblib
+import os
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 LOOKBACK = 7
-CSV_PATH = 'weather.csv'
+CSV_PATH = os.path.join(SCRIPT_DIR, 'datasets', 'weather.csv')
+SCALERS_DIR = os.path.join(SCRIPT_DIR, 'scalers')
 
 class WeatherDataset:
     def __init__(self):
@@ -71,8 +75,8 @@ class WeatherDataset:
         )
 
     def save_scalers(self):
-        joblib.dump(self.scaler_temp, "scaler_temp.pkl")
-        joblib.dump(self.scaler_et0, "scaler_et0.pkl")
+        joblib.dump(self.scaler_temp, os.path.join(SCALERS_DIR, "scaler_temp.pkl"))
+        joblib.dump(self.scaler_et0, os.path.join(SCALERS_DIR, "scaler_et0.pkl"))
 
     def get_latest_sequence(self):
         raw_temp = self.df[self.col_temp].values[-LOOKBACK:].reshape(-1, 1).astype(float)

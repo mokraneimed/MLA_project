@@ -3,6 +3,12 @@ import joblib
 import numpy as np
 from lstm_models import WeatherLSTM
 from data_utils import WeatherDataset
+import os
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+MODELS_DIR = os.path.join(SCRIPT_DIR, 'models')
+SCALERS_DIR = os.path.join(SCRIPT_DIR, 'scalers')
 
 class TaskForecaster:
     def __init__(self):
@@ -16,8 +22,8 @@ class TaskForecaster:
         self.et0_model = WeatherLSTM()
         
         try:
-            self.temp_model.load_state_dict(torch.load("temp_model.pth"))
-            self.et0_model.load_state_dict(torch.load("et0_model.pth"))
+            self.temp_model.load_state_dict(torch.load(os.path.join(MODELS_DIR, "temp_model.pth")))
+            self.et0_model.load_state_dict(torch.load(os.path.join(MODELS_DIR, "et0_model.pth")))
             print("LSTMs loaded successfully.")
         except FileNotFoundError:
             print("WARNING: LSTM models not found. Please run train_tasks.py first.")
@@ -27,8 +33,11 @@ class TaskForecaster:
 
         # Load Scalers
         try:
-            self.scaler_temp = joblib.load("scaler_temp.pkl")
-            self.scaler_et0 = joblib.load("scaler_et0.pkl")
+            self.scaler_temp = joblib.load(os.path.join(SCALERS_DIR, "scaler_temp.pkl"))
+            self.scaler_et0 = joblib.load(os.path.join(SCALERS_DIR, "scaler_et0.pkl"))
+
+            self.ds.scaler_temp = self.scaler_temp
+            self.ds.scaler_et0 = self.scaler_et0
         except:
             print("Scalers not found.")
 

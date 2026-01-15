@@ -30,5 +30,13 @@
     "EUV data for 10 days": {
         "true_task_id": 1,
         "true_days": 10
+    },
+    "Predict temperature for 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "Predict temperature": {
+        "true_task_id": 0,
+        "true_days": 1
     }
 }

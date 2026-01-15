@@ -5,6 +5,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 from data_utils import WeatherDataset
 from lstm_models import WeatherLSTM
+import os
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+MODELS_DIR = os.path.join(SCRIPT_DIR, 'models')
+GRAPHS_DIR = os.path.join(SCRIPT_DIR, 'graphs')
 
 def train_and_plot(task_name, dataset, col_name, scaler, save_path, epochs=50):
     print(f"\n=== Processing {task_name} ===")
@@ -78,7 +84,7 @@ def train_and_plot(task_name, dataset, col_name, scaler, save_path, epochs=50):
     plt.grid(True)
     
     # Save plot image
-    plt.savefig(f"graph_{task_name}.png")
+    plt.savefig(os.path.join(GRAPHS_DIR, f"graph_{task_name}.png"))
     print(f"Graph saved as graph_{task_name}.png")
     # plt.show() # Uncomment if running locally with a screen
 
@@ -86,10 +92,10 @@ if __name__ == "__main__":
     ds = WeatherDataset()
     
     # 1. Temperature
-    train_and_plot("Temperature", ds, ds.col_temp, ds.scaler_temp, "temp_model.pth", epochs=350)
+    train_and_plot("Temperature", ds, ds.col_temp, ds.scaler_temp, os.path.join(MODELS_DIR, "temp_model.pth"), epochs=350)
     
     # 2. ET0
-    train_and_plot("ET0", ds, ds.col_et0, ds.scaler_et0, "et0_model.pth", epochs=350)
+    train_and_plot("ET0", ds, ds.col_et0, ds.scaler_et0, os.path.join(MODELS_DIR, "et0_model.pth"), epochs=350)
     
     ds.save_scalers()
     print("\nAll Done. Check the .png files generated.")
