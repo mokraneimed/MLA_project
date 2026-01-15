@@ -1,0 +1,34 @@
+{
+    "Please predict temperature for 7 days": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "Please predict temperature for 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "Predict temperature for 5 days": {
+        "true_task_id": 0,
+        "true_days": 5
+    },
+    "Tell me EUV for next week": {
+        "true_task_id": 1,
+        "true_days": 7
+    },
+    "What is the temp?": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "EUV forecast needed": {
+        "true_task_id": 1,
+        "true_days": 1
+    },
+    "Temperature prediction required": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "EUV data for 10 days": {
+        "true_task_id": 1,
+        "true_days": 10
+    }
+}

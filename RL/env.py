@@ -2,11 +2,13 @@ import gymnasium as gym
 from gymnasium import spaces
 import numpy as np
 import random
+from reward_model import LLMRewardModel
 
 class HierarchicalTaskEnv(gym.Env):
     def __init__(self, embedder):
         super(HierarchicalTaskEnv, self).__init__()
         self.embedder = embedder
+        self.reward_model = LLMRewardModel()
         
         # State: BERT embedding size (128)
         self.observation_space = spaces.Box(low=-np.inf, high=np.inf, shape=(128,), dtype=np.float32)
@@ -41,23 +43,26 @@ class HierarchicalTaskEnv(gym.Env):
         else:
             self._run_euv_task(days_input)
             
-        # Reward Logic: Random for now, as requested
-        reward = np.random.randn() 
-        
+        # Reward
+        reward, info = self.reward_model.get_reward(
+            self.current_query, task_id, days_input
+        )
+        if "r1" in info:
+            print(f"   [Reward] Total: {reward:.1f} | R1 (Task): {info['r1']} | R2 (Days Diff): {info['r2']}")
         # In a one-shot task (query -> response), the episode ends immediately
         terminated = True 
         truncated = False
         
-        return self.observation_space.sample(), reward, terminated, truncated, {}
+        return self.observation_space.sample(), reward, terminated, truncated, info
 
     def _run_temperature_task(self, days):
         # Static output mock
         print(f"\n[System] TASK: Temperature Prediction")
         print(f"[System] INPUT: {days} days")
-        print(f"[Result] The predicted temperature for the next {days} days are: 24°C, 25°C, 23°C ... (static mock)")
+        # print(f"[Result] The predicted temperature for the next {days} days are: 24°C, 25°C, 23°C ... (static mock)")
 
     def _run_euv_task(self, days):
         # Static output mock
         print(f"\n[System] TASK: EUV (Extreme Ultraviolet) Prediction")
         print(f"[System] INPUT: {days} days")
-        print(f"[Result] The predicted EUV flux for the next {days} days are: 1.2e-3, 1.4e-3 ... (static mock)")
+        # print(f"[Result] The predicted EUV flux for the next {days} days are: 1.2e-3, 1.4e-3 ... (static mock)")

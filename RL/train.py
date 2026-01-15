@@ -10,7 +10,7 @@ LR = 0.002
 GAMMA = 0.99
 EPS_CLIP = 0.2
 K_EPOCHS = 4
-EPISODES = 50 
+EPISODES = 400 
 
 def train():
     # 1. Setup
