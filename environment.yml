@@ -1,0 +1,16 @@
+name: mla
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pip
+  - pip:
+    - transformers
+    - gymnasium
+    - numpy
+    - requests
+    - tqdm
