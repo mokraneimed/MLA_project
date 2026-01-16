@@ -110,9 +110,9 @@ class LLMRewardModel:
         
         # R1: Task Accuracy
         if agent_task == true_task:
-            r1 = 30.0
+            r1 = 10.0
         else:
-            r1 = -30.0
+            r1 = -10.0
         
         # R2: Input Precision (Negative Error)
         r2 = -float(abs(true_days - agent_days))

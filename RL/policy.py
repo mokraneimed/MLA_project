@@ -8,23 +8,23 @@ class HierarchicalPPO(nn.Module):
         
         # Shared Feature Extractor
         self.backbone = nn.Sequential(
-            nn.Linear(state_dim, 128),
+            nn.Linear(state_dim, 64),
             nn.Tanh(),
-            nn.Linear(128, 64),
+            nn.Linear(64, 32),
             nn.Tanh()
         )
         
         # --- ACTOR HEADS ---
         # 1. Manager Policy: Selects Task (Temp vs ET0)
-        self.actor_task = nn.Linear(64, action_dims[0])
+        self.actor_task = nn.Linear(32, action_dims[0])
         
         # 2. Worker Policy: Selects Days (0-9)
         # Ideally, this receives the task as input too, but we keep it simple here
-        self.actor_days = nn.Linear(64, action_dims[1])
+        self.actor_days = nn.Linear(32, action_dims[1])
         
         # --- CRITIC HEAD ---
         # Value function estimates how good the state is
-        self.critic = nn.Linear(64, 1)
+        self.critic = nn.Linear(32, 1)
 
     def forward(self):
         raise NotImplementedError
