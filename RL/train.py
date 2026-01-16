@@ -45,9 +45,9 @@ def train():
     
     # Dummy Training Data
     training_queries = [
-        "Predict temperature for 5 days", "Tell me EUV for next week", 
-        "What is the temp?", "EUV forecast needed", 
-        "Temperature prediction required", "EUV data for 10 days"
+        "Predict temperature for 5 days", "Tell me ET0 for next week", 
+        "What is the temp?", "Evapotranspiration forecast needed", 
+        "Temperature prediction required", "ET0 data for 10 days"
     ]
 
     print("Starting Training...")

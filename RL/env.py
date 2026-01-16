@@ -16,7 +16,7 @@ class HierarchicalTaskEnv(gym.Env):
         self.observation_space = spaces.Box(low=-np.inf, high=np.inf, shape=(128,), dtype=np.float32)
         
         # Action Space: MultiDiscrete
-        # Index 0: Task Selection (0 = Temperature, 1 = EUV)
+        # Index 0: Task Selection (0 = Temperature, 1 = ET0)
         # Index 1: Input Parameter (Days) - Let's allow 1 to 10 days (mapped from 0-9)
         self.action_space = spaces.MultiDiscrete([2, 10])
         

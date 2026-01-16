@@ -15,7 +15,7 @@ class HierarchicalPPO(nn.Module):
         )
         
         # --- ACTOR HEADS ---
-        # 1. Manager Policy: Selects Task (Temp vs EUV)
+        # 1. Manager Policy: Selects Task (Temp vs ET0)
         self.actor_task = nn.Linear(64, action_dims[0])
         
         # 2. Worker Policy: Selects Days (0-9)

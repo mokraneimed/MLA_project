@@ -57,7 +57,7 @@ class LLMRewardModel:
             
             CONTEXT:
             - Task ID 0: Temperature Prediction
-            - Task ID 1: EUV (Solar) Prediction
+            - Task ID 1: ET0 (Evapotranspiration) Prediction
             
             USER QUERY: "{user_query}"
             

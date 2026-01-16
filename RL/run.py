@@ -40,7 +40,7 @@ def run_agent():
     model.eval()
 
     print("\n--- AI Agent Ready ---")
-    print("Tasks available: 1. Temperature, 2. EUV")
+    print("Tasks available: 1. Temperature, 2. ET0 (Evapotranspiration)")
     print("Type 'exit' to quit.\n")
 
     while True:
@@ -56,7 +56,7 @@ def run_agent():
             task, days, _, _ = model.act(state)
             
         # Map actions to readable names for debugging
-        task_name = "Temperature" if task == 0 else "EUV"
+        task_name = "Temperature" if task == 0 else "ET0"
         days_value = days + 1
         
         print(f"\n[Agent Logic] Embedding generated.")
