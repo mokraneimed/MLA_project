@@ -38,5 +38,817 @@
     "Predict temperature": {
         "true_task_id": 0,
         "true_days": 1
+    },
+    "Predict mean temperature for the next 5 days": {
+        "true_task_id": 0,
+        "true_days": 5
+    },
+    "I need to know the weather forecast for 7 days": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "What is the expected ET0 for the coming week": {
+        "true_task_id": 1,
+        "true_days": 7
+    },
+    "Give me the temperature forecast for a week": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "I want to know the heat for the next 2 days": {
+        "true_task_id": 0,
+        "true_days": 2
+    },
+    "Predict ET0 for 5 days": {
+        "true_task_id": 1,
+        "true_days": 5
+    },
+    "What will the temp be like for ten days": {
+        "true_task_id": 0,
+        "true_days": 10
+    },
+    "How hot will it be for the next 9 days": {
+        "true_task_id": 0,
+        "true_days": 9
+    },
+    "Forecast temperature for 4 days": {
+        "true_task_id": 0,
+        "true_days": 4
+    },
+    "What is the evapotranspiration for the next 8 days": {
+        "true_task_id": 1,
+        "true_days": 8
+    },
+    "Tell me the water loss for 3 days": {
+        "true_task_id": 1,
+        "true_days": 3
+    },
+    "I need the crop water need for 6 days": {
+        "true_task_id": 1,
+        "true_days": 6
+    },
+    "What is the weather like for the next 5 days": {
+        "true_task_id": 0,
+        "true_days": 5
+    },
+    "Predict mean temperature for 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "Give me the ET0 forecast for 2 days": {
+        "true_task_id": 1,
+        "true_days": 2
+    },
+    "I want to know the temperature for a week": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "What is the heat index for the next 4 days": {
+        "true_task_id": 0,
+        "true_days": 4
+    },
+    "Predict evapotranspiration for 9 days": {
+        "true_task_id": 1,
+        "true_days": 9
+    },
+    "Tell me the temperature forecast for tomorrow": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "I need the weather forecast for 6 days": {
+        "true_task_id": 0,
+        "true_days": 6
+    },
+    "What is the crop water need for the next 7 days": {
+        "true_task_id": 1,
+        "true_days": 7
+    },
+    "Predict mean temperature for the next 3 days": {
+        "true_task_id": 0,
+        "true_days": 3
+    },
+    "Give me the evapotranspiration data for 5 days": {
+        "true_task_id": 1,
+        "true_days": 5
+    },
+    "I want to know the temperature for 10 days": {
+        "true_task_id": 0,
+        "true_days": 10
+    },
+    "What will the temp be like for the next 6 days": {
+        "true_task_id": 0,
+        "true_days": 6
+    },
+    "Forecast ET0 for 8 days": {
+        "true_task_id": 1,
+        "true_days": 8
+    },
+    "Tell me the weather forecast for the next 9 days": {
+        "true_task_id": 0,
+        "true_days": 9
+    },
+    "I need to know the heat for the coming week": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "What is the expected temperature for the next 4 days": {
+        "true_task_id": 0,
+        "true_days": 4
+    },
+    "Predict ET0 for the next 6 days": {
+        "true_task_id": 1,
+        "true_days": 6
+    },
+    "Give me the temperature forecast for 3 days": {
+        "true_task_id": 0,
+        "true_days": 3
+    },
+    "I want to know the water loss for the next 7 days": {
+        "true_task_id": 1,
+        "true_days": 7
+    },
+    "What is the evapotranspiration for 4 days": {
+        "true_task_id": 1,
+        "true_days": 4
+    },
+    "Predict mean temperature for 9 days": {
+        "true_task_id": 0,
+        "true_days": 9
+    },
+    "Tell me the crop water need for the next 5 days": {
+        "true_task_id": 1,
+        "true_days": 5
+    },
+    "I need the weather forecast for tomorrow": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "What is the temperature going to be like for the next 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "Predict evapotranspiration for 7 days": {
+        "true_task_id": 1,
+        "true_days": 7
+    },
+    "Give me the ET0 forecast for the coming week": {
+        "true_task_id": 1,
+        "true_days": 7
+    },
+    "I want to know the heat index for the next 5 days": {
+        "true_task_id": 0,
+        "true_days": 5
+    },
+    "What will the temp be like for 6 days": {
+        "true_task_id": 0,
+        "true_days": 6
+    },
+    "Forecast temperature for the next 10 days": {
+        "true_task_id": 0,
+        "true_days": 10
+    },
+    "Tell me the weather forecast for the next 7 days": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "I need the evapotranspiration data for 8 days": {
+        "true_task_id": 1,
+        "true_days": 8
+    },
+    "What is the crop water need for the next 9 days": {
+        "true_task_id": 1,
+        "true_days": 9
+    },
+    "Predict mean temperature for the next 4 days": {
+        "true_task_id": 0,
+        "true_days": 4
+    },
+    "Give me the temperature forecast for 9 days": {
+        "true_task_id": 0,
+        "true_days": 9
+    },
+    "I want to know the temperature for the next 3 days": {
+        "true_task_id": 0,
+        "true_days": 3
+    },
+    "What is the expected ET0 for the next 5 days": {
+        "true_task_id": 1,
+        "true_days": 5
+    },
+    "Predict ET0 for the next 8 days": {
+        "true_task_id": 1,
+        "true_days": 8
+    },
+    "Tell me the weather forecast for the next 6 days": {
+        "true_task_id": 0,
+        "true_days": 6
+    },
+    "I need to know the heat for the next 7 days": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "What is the temperature going to be like for the next 9 days": {
+        "true_task_id": 0,
+        "true_days": 9
+    },
+    "Give me the evapotranspiration forecast for 4 days": {
+        "true_task_id": 1,
+        "true_days": 4
+    },
+    "I want to know the water loss for the next 5 days": {
+        "true_task_id": 1,
+        "true_days": 5
+    },
+    "What will the temp be like for the coming week": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "Forecast ET0 for 6 days": {
+        "true_task_id": 1,
+        "true_days": 6
+    },
+    "Tell me the crop water need for the next 8 days": {
+        "true_task_id": 1,
+        "true_days": 8
+    },
+    "I need the weather forecast for the next 5 days": {
+        "true_task_id": 0,
+        "true_days": 5
+    },
+    "What is the expected temperature for the next 6 days": {
+        "true_task_id": 0,
+        "true_days": 6
+    },
+    "Predict mean temperature for the next 7 days": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "Give me the temperature forecast for 10 days": {
+        "true_task_id": 0,
+        "true_days": 10
+    },
+    "I want to know the heat index for the next 9 days": {
+        "true_task_id": 0,
+        "true_days": 9
+    },
+    "What is the evapotranspiration for the next 3 days": {
+        "true_task_id": 1,
+        "true_days": 3
+    },
+    "Predict evapotranspiration for 5 days": {
+        "true_task_id": 1,
+        "true_days": 5
+    },
+    "Tell me the weather forecast for the next 4 days": {
+        "true_task_id": 0,
+        "true_days": 4
+    },
+    "I need the ET0 data for the next 6 days": {
+        "true_task_id": 1,
+        "true_days": 6
+    },
+    "What is the crop water need for the next 4 days": {
+        "true_task_id": 1,
+        "true_days": 4
+    },
+    "Give me the temperature forecast for 7 days": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "I want to know the temperature for the next 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "What will the temp be like for the next 5 days": {
+        "true_task_id": 0,
+        "true_days": 5
+    },
+    "Forecast temperature for the next 6 days": {
+        "true_task_id": 0,
+        "true_days": 6
+    },
+    "Tell me the weather forecast for the next 3 days": {
+        "true_task_id": 0,
+        "true_days": 3
+    },
+    "What is the expected ET0 for the next 4 days": {
+        "true_task_id": 1,
+        "true_days": 4
+    },
+    "Predict ET0 for the next 7 days": {
+        "true_task_id": 1,
+        "true_days": 7
+    },
+    "Give me the evapotranspiration forecast for 9 days": {
+        "true_task_id": 1,
+        "true_days": 9
+    },
+    "I want to know the water loss for the next 6 days": {
+        "true_task_id": 1,
+        "true_days": 6
+    },
+    "What is the temperature going to be like for the next 7 days": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "Predict mean temperature for the next 6 days": {
+        "true_task_id": 0,
+        "true_days": 6
+    },
+    "Tell me the crop water need for the next 9 days": {
+        "true_task_id": 1,
+        "true_days": 9
+    },
+    "I need the weather forecast for the next 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "What is the expected temperature for the next 5 days": {
+        "true_task_id": 0,
+        "true_days": 5
+    },
+    "Give me the temperature forecast for 6 days": {
+        "true_task_id": 0,
+        "true_days": 6
+    },
+    "I want to know the heat index for the next 4 days": {
+        "true_task_id": 0,
+        "true_days": 4
+    },
+    "What will the temp be like for the next 3 days": {
+        "true_task_id": 0,
+        "true_days": 3
+    },
+    "Forecast ET0 for 5 days": {
+        "true_task_id": 1,
+        "true_days": 5
+    },
+    "I need the evapotranspiration data for the next 7 days": {
+        "true_task_id": 1,
+        "true_days": 7
+    },
+    "What is the crop water need for the next 6 days": {
+        "true_task_id": 1,
+        "true_days": 6
+    },
+    "Give me the ET0 forecast for 8 days": {
+        "true_task_id": 1,
+        "true_days": 8
+    },
+    "I want to know the temperature for the next 9 days": {
+        "true_task_id": 0,
+        "true_days": 9
+    },
+    "What is the evapotranspiration for the next 6 days": {
+        "true_task_id": 1,
+        "true_days": 6
+    },
+    "Predict evapotranspiration for 4 days": {
+        "true_task_id": 1,
+        "true_days": 4
+    },
+    "Tell me the weather forecast for the next 5 days": {
+        "true_task_id": 0,
+        "true_days": 5
+    },
+    "I need to know the heat for the next 6 days": {
+        "true_task_id": 0,
+        "true_days": 6
+    },
+    "Give me the temperature forecast for 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "I want to know the water loss for the next 9 days": {
+        "true_task_id": 1,
+        "true_days": 9
+    },
+    "What will the temp be like for the next 4 days": {
+        "true_task_id": 0,
+        "true_days": 4
+    },
+    "Forecast temperature for the next 7 days": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "Tell me the crop water need for the next 7 days": {
+        "true_task_id": 1,
+        "true_days": 7
+    },
+    "I need the weather forecast for the next 4 days": {
+        "true_task_id": 0,
+        "true_days": 4
+    },
+    "What is the expected temperature for the next 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "Predict mean temperature for the next 9 days": {
+        "true_task_id": 0,
+        "true_days": 9
+    },
+    "Give me the evapotranspiration forecast for 6 days": {
+        "true_task_id": 1,
+        "true_days": 6
+    },
+    "I want to know the heat index for the next 7 days": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "What is the temperature going to be like for the next 6 days": {
+        "true_task_id": 0,
+        "true_days": 6
+    },
+    "Predict ET0 for the next 4 days": {
+        "true_task_id": 1,
+        "true_days": 4
+    },
+    "Tell me the weather forecast for the next 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "I need the ET0 data for the next 5 days": {
+        "true_task_id": 1,
+        "true_days": 5
+    },
+    "What is the crop water need for the next 5 days": {
+        "true_task_id": 1,
+        "true_days": 5
+    },
+    "Give me the temperature forecast for 5 days": {
+        "true_task_id": 0,
+        "true_days": 5
+    },
+    "I want to know the temperature for the next 6 days": {
+        "true_task_id": 0,
+        "true_days": 6
+    },
+    "What will the temp be like for the next 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "Forecast ET0 for 7 days": {
+        "true_task_id": 1,
+        "true_days": 7
+    },
+    "I need to know the heat for the next 5 days": {
+        "true_task_id": 0,
+        "true_days": 5
+    },
+    "What is the expected ET0 for the next 7 days": {
+        "true_task_id": 1,
+        "true_days": 7
+    },
+    "Predict mean temperature for the next 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "Give me the evapotranspiration forecast for 5 days": {
+        "true_task_id": 1,
+        "true_days": 5
+    },
+    "I want to know the water loss for the next 4 days": {
+        "true_task_id": 1,
+        "true_days": 4
+    },
+    "What is the evapotranspiration for the next 5 days": {
+        "true_task_id": 1,
+        "true_days": 5
+    },
+    "Predict evapotranspiration for 6 days": {
+        "true_task_id": 1,
+        "true_days": 6
+    },
+    "Tell me the crop water need for the next 6 days": {
+        "true_task_id": 1,
+        "true_days": 6
+    },
+    "I need the weather forecast for the next 9 days": {
+        "true_task_id": 0,
+        "true_days": 9
+    },
+    "Give me the temperature forecast for 4 days": {
+        "true_task_id": 0,
+        "true_days": 4
+    },
+    "I want to know the heat index for the next 6 days": {
+        "true_task_id": 0,
+        "true_days": 6
+    },
+    "What will the temp be like for the next 7 days": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "Forecast temperature for the next 5 days": {
+        "true_task_id": 0,
+        "true_days": 5
+    },
+    "I need the ET0 data for the next 9 days": {
+        "true_task_id": 1,
+        "true_days": 9
+    },
+    "What is the crop water need for the next 8 days": {
+        "true_task_id": 1,
+        "true_days": 8
+    },
+    "Give me the evapotranspiration forecast for 8 days": {
+        "true_task_id": 1,
+        "true_days": 8
+    },
+    "I want to know the temperature for the next 5 days": {
+        "true_task_id": 0,
+        "true_days": 5
+    },
+    "Predict ET0 for the next 9 days": {
+        "true_task_id": 1,
+        "true_days": 9
+    },
+    "I need to know the heat for the next 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "What is the expected ET0 for the next 6 days": {
+        "true_task_id": 1,
+        "true_days": 6
+    },
+    "What will the temp be like for the next 9 days": {
+        "true_task_id": 0,
+        "true_days": 9
+    },
+    "Forecast ET0 for 4 days": {
+        "true_task_id": 1,
+        "true_days": 4
+    },
+    "Tell me the crop water need for the next 4 days": {
+        "true_task_id": 1,
+        "true_days": 4
+    },
+    "I need the weather forecast for the next 6 days": {
+        "true_task_id": 0,
+        "true_days": 6
+    },
+    "What is the expected temperature for the next 7 days": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "Give me the evapotranspiration forecast for 7 days": {
+        "true_task_id": 1,
+        "true_days": 7
+    },
+    "What is the temperature going to be like for the next 4 days": {
+        "true_task_id": 0,
+        "true_days": 4
+    },
+    "Predict evapotranspiration for 8 days": {
+        "true_task_id": 1,
+        "true_days": 8
+    },
+    "I need the ET0 data for the next 4 days": {
+        "true_task_id": 1,
+        "true_days": 4
+    },
+    "What is the crop water need for the next 3 days": {
+        "true_task_id": 1,
+        "true_days": 3
+    },
+    "I want to know the temperature for the next 4 days": {
+        "true_task_id": 0,
+        "true_days": 4
+    },
+    "Forecast temperature for the next 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "What is the expected ET0 for the next 3 days": {
+        "true_task_id": 1,
+        "true_days": 3
+    },
+    "Predict ET0 for the next 5 days": {
+        "true_task_id": 1,
+        "true_days": 5
+    },
+    "I want to know the water loss for the next 8 days": {
+        "true_task_id": 1,
+        "true_days": 8
+    },
+    "What is the evapotranspiration for the next 7 days": {
+        "true_task_id": 1,
+        "true_days": 7
+    },
+    "I need the weather forecast for the next 7 days": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "Give me the temperature forecast for 2 days": {
+        "true_task_id": 0,
+        "true_days": 2
+    },
+    "I want to know the heat index for the next 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "Forecast ET0 for 3 days": {
+        "true_task_id": 1,
+        "true_days": 3
+    },
+    "Tell me the weather forecast for the next 2 days": {
+        "true_task_id": 0,
+        "true_days": 2
+    },
+    "I need the ET0 data for the next 3 days": {
+        "true_task_id": 1,
+        "true_days": 3
+    },
+    "What is the crop water need for the next 2 days": {
+        "true_task_id": 1,
+        "true_days": 2
+    },
+    "Predict mean temperature for the next 2 days": {
+        "true_task_id": 0,
+        "true_days": 2
+    },
+    "Give me the evapotranspiration forecast for 3 days": {
+        "true_task_id": 1,
+        "true_days": 3
+    },
+    "What is the evapotranspiration for the next 2 days": {
+        "true_task_id": 1,
+        "true_days": 2
+    },
+    "Predict evapotranspiration for 3 days": {
+        "true_task_id": 1,
+        "true_days": 3
+    },
+    "Tell me the weather forecast for the next day": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "I need to know the heat for the next day": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "What is the expected ET0 for the next day": {
+        "true_task_id": 1,
+        "true_days": 1
+    },
+    "Give me the temperature forecast for the next day": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "I want to know the water loss for the next day": {
+        "true_task_id": 1,
+        "true_days": 1
+    },
+    "What will the temp be like for the next day": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "Forecast temperature for the next day": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "Tell me the crop water need for the next day": {
+        "true_task_id": 1,
+        "true_days": 1
+    },
+    "I need the weather forecast for the next day": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "What is the expected temperature for the next day": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "Predict mean temperature for the next day": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "Give me the evapotranspiration forecast for the next day": {
+        "true_task_id": 1,
+        "true_days": 1
+    },
+    "I want to know the heat index for the next day": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "What is the temperature going to be like for the next day": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "What is the temperature going to be like tomorrow": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "Tell me ET0 for next week": {
+        "true_task_id": 1,
+        "true_days": 7
+    },
+    "Evapotranspiration forecast needed": {
+        "true_task_id": 1,
+        "true_days": 1
+    },
+    "ET0 data for 10 days": {
+        "true_task_id": 1,
+        "true_days": 10
+    },
+    "Predict ET0 for 10 days": {
+        "true_task_id": 1,
+        "true_days": 10
+    },
+    "Predict Tempurature for 10 days": {
+        "true_task_id": 0,
+        "true_days": 10
+    },
+    "Temperature prediction": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "what is the tempurature tomorrow": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "predict ET0 for 10 days": {
+        "true_task_id": 1,
+        "true_days": 10
+    },
+    "what is the temperature for 5 days ": {
+        "true_task_id": 0,
+        "true_days": 5
+    },
+    "what is the tempurature for tomorrow ": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "Predict temperature for the next 2 days": {
+        "true_task_id": 0,
+        "true_days": 2
+    },
+    "Predict temperature for the next 3 days": {
+        "true_task_id": 0,
+        "true_days": 3
+    },
+    "Predict temperature for the next 4 days": {
+        "true_task_id": 0,
+        "true_days": 4
+    },
+    "Predict temperature for the next 5 days": {
+        "true_task_id": 0,
+        "true_days": 5
+    },
+    "Predict temperature for the next 6 days": {
+        "true_task_id": 0,
+        "true_days": 6
+    },
+    "Predict temperature for the next 7 days": {
+        "true_task_id": 0,
+        "true_days": 7
+    },
+    "Predict temperature for the next 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "Predict temperature for the next 9 days": {
+        "true_task_id": 0,
+        "true_days": 9
+    },
+    "Predict temperature for the next 10 days": {
+        "true_task_id": 0,
+        "true_days": 10
+    },
+    "Predict ET0 for tomorrow": {
+        "true_task_id": 1,
+        "true_days": 1
+    },
+    "Predict ET0 for the next 2 days": {
+        "true_task_id": 1,
+        "true_days": 2
+    },
+    "Predict ET0 for the next 3 days": {
+        "true_task_id": 1,
+        "true_days": 3
+    },
+    "Predict ET0 for the next 10 days": {
+        "true_task_id": 1,
+        "true_days": 10
+    },
+    "Predict temperature for tomorrow": {
+        "true_task_id": 0,
+        "true_days": 1
+    },
+    "what is temp after 5 days": {
+        "true_task_id": 0,
+        "true_days": 5
+    },
+    "predict tempurature for the next 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "what is the tempurature for the next 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
+    },
+    "Predict mean tempurature for the next 8 days": {
+        "true_task_id": 0,
+        "true_days": 8
     }
 }

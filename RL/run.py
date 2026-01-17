@@ -26,7 +26,7 @@ def run_agent():
     embedder = QueryEmbedder()
     env = HierarchicalTaskEnv(embedder)
     
-    state_dim = 128
+    state_dim = 128  # 128 from BERT
     action_dims = [2, 10]
     
     # 2. Load Model
@@ -53,7 +53,7 @@ def run_agent():
         
         # 4. Agent Decision
         with torch.no_grad():
-            task, days, _, _ = model.act(state)
+            task, days, _, _ = model.act(state, deterministic=True)
             
         # Map actions to readable names for debugging
         task_name = "Temperature" if task == 0 else "ET0"

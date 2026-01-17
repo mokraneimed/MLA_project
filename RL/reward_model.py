@@ -110,22 +110,28 @@ class LLMRewardModel:
         
         # R1: Task Accuracy
         if agent_task == true_task:
-            r1 = 10.0
+            r1 = 2.0
         else:
-            r1 = -10.0
+            r1 = -2.0
         
-        # R2: Input Precision (Negative Error)
-        r2 = -float(abs(true_days - agent_days))
+        # R2: Input Precision
+        # Penalty is -0.1 per day off. 
+        # Example: Off by 5 days = -0.5 penalty.
+        diff = abs(true_days - agent_days)
+        r2 = -0.1 * float(diff)
         
-        total_reward = r1 + r2
+        # Bonus for PERFECTION
+        # If everything is perfect, give a nice bump to lock in the behavior
+        bonus = 1.0 if (agent_task == true_task and diff == 0) else 0.0
+        
+        total_reward = r1 + r2 + bonus
         
         return total_reward, {
             "r1": r1,
             "r2": r2,
+            "bonus": bonus,
             "true_task": true_task,
-            "true_days": true_days,
-            "agent_task": agent_task,
-            "agent_days": agent_days
+            "true_days": true_days
         }
 
 if __name__ == "__main__":

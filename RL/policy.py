@@ -8,45 +8,48 @@ class HierarchicalPPO(nn.Module):
         
         # Shared Feature Extractor
         self.backbone = nn.Sequential(
-            nn.Linear(state_dim, 64),
-            nn.Tanh(),
-            nn.Linear(64, 32),
-            nn.Tanh()
+            nn.Linear(state_dim, 128),
+            nn.ReLU(),
+            nn.Linear(128, 64),
+            nn.ReLU()
         )
         
         # --- ACTOR HEADS ---
-        # 1. Manager Policy: Selects Task (Temp vs ET0)
-        self.actor_task = nn.Linear(32, action_dims[0])
+        self.actor_task = nn.Linear(64, action_dims[0])
         
-        # 2. Worker Policy: Selects Days (0-9)
-        # Ideally, this receives the task as input too, but we keep it simple here
-        self.actor_days = nn.Linear(32, action_dims[1])
+        self.actor_days = nn.Linear(64, action_dims[1])
         
         # --- CRITIC HEAD ---
-        # Value function estimates how good the state is
-        self.critic = nn.Linear(32, 1)
+        self.critic = nn.Linear(64, 1)
 
-    def forward(self):
-        raise NotImplementedError
-
-    def act(self, state):
+    def act(self, state, deterministic=False):
         state = torch.from_numpy(state).float().unsqueeze(0) # Add batch dim
         features = self.backbone(state)
         
-        # Task Logic
+        # Get Logits
         task_logits = self.actor_task(features)
-        task_dist = Categorical(logits=task_logits)
-        task_action = task_dist.sample()
-        
-        # Days Logic
         days_logits = self.actor_days(features)
-        days_dist = Categorical(logits=days_logits)
-        days_action = days_dist.sample()
-        
-        # Calculate log probs for PPO
-        action_logprob = task_dist.log_prob(task_action) + days_dist.log_prob(days_action)
-        
-        return task_action.item(), days_action.item(), action_logprob, self.critic(features)
+
+        if deterministic:
+            # [CHANGE] Greedy selection for Evaluation
+            # We take the index with the highest probability
+            task_action = torch.argmax(task_logits, dim=-1)
+            days_action = torch.argmax(days_logits, dim=-1)
+            
+            # Return zeros for log_prob/value as they aren't used in eval
+            return task_action.item(), days_action.item(), 0, None
+        else:
+            # [CHANGE] Stochastic selection for Training
+            task_dist = Categorical(logits=task_logits)
+            days_dist = Categorical(logits=days_logits)
+            
+            task_action = task_dist.sample()
+            days_action = days_dist.sample()
+            
+            # Calculate log probs for PPO
+            action_logprob = task_dist.log_prob(task_action) + days_dist.log_prob(days_action)
+            
+            return task_action.item(), days_action.item(), action_logprob, self.critic(features)
 
     def evaluate(self, state, task_action, days_action):
         # Used during training loop
